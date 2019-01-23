@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Malo pojasnjenje:
+Kada se definira element sa npr.
+<!ELEMENT podatak (a, b?, c+, d*)>
+to znaci da element podatak ima:
+- tocno 1 element a koji se nalazi prvi
+- 0 ili 1 element b koji se nalazi poslije elementa a
+- 1 ili vise elemenata c koji se nalaze iza a ili b ako on postoji (b ne moze biti poslije c)
+- 0 ili vise elemenata d iza elementa c (koji mora biti barem jednom)
+-->
+<!-- root -->
+<!ELEMENT podatci (stud*)>
+<!-- student -->
+<!ELEMENT stud (JMBAG, JMBG, prezStud, imeStud, djevPrezime?, spol?, datRodj, oznDrzavaRodj?, postOznRodj?, sifOpcinaRodj?, sifNarod?, sifSkola?, godZavSkola?, sifStrukaZavSkola?, sifProgIzobrazbe?, imeMajka?, imeOtac?, studDrzav*, studVU?)>
+<!-- elementi unutar stud -->
+<!ELEMENT JMBAG (#PCDATA)>
+<!ELEMENT JMBG (#PCDATA)>
+<!ELEMENT prezStud (#PCDATA)>
+<!ELEMENT imeStud (#PCDATA)>
+<!ELEMENT djevPrezime (#PCDATA)>
+<!ELEMENT spol (#PCDATA)>
+<!ELEMENT datRodj (#PCDATA)>
+<!ELEMENT oznDrzavaRodj (#PCDATA)>
+<!ELEMENT postOznRodj (#PCDATA)>
+<!ELEMENT sifOpcinaRodj (#PCDATA)>
+<!ELEMENT sifNarod (#PCDATA)>
+<!ELEMENT sifSkola (#PCDATA)>
+<!ELEMENT godZavSkola (#PCDATA)>
+<!ELEMENT sifStrukaZavSkola (#PCDATA)>
+<!ELEMENT sifProgIzobrazbe (#PCDATA)>
+<!ELEMENT imeMajka (#PCDATA)>
+<!ELEMENT imeOtac (#PCDATA)>
+<!-- elementi s podelementima -->
+<!ELEMENT studDrzav (oznDrzavlj, datDrzavljOd, datDrzavljDo?)>
+<!ELEMENT studVU (rbrMatKnj?, datUpis?, oznDijaspora?, datIspis?, datPodDok?, brKopIndex?, eMailStud?, mbrStudStari?, sifRazlPrestPrava?, potpunoUISVU, komentar?, prelazVU?, studPosStat*, studAkGod*)>
+<!-- elementi unutar studDrzav -->
+<!ELEMENT oznDrzavlj (#PCDATA)>
+<!ELEMENT datDrzavljOd (#PCDATA)>
+<!ELEMENT datDrzavljDo (#PCDATA)>
+<!-- elementi unutar studVU -->
+<!ELEMENT rbrMatKnj (#PCDATA)>
+<!ELEMENT datUpis (#PCDATA)>
+
+
+
+<!ELEMENT oznDijaspora (#PCDATA)>
+<!ELEMENT datIspis (#PCDATA)>
+<!ELEMENT datPodDok (#PCDATA)>
+<!ELEMENT brKopIndex (#PCDATA)>
+<!ELEMENT eMailStud (#PCDATA)>
+<!ELEMENT mbrStudStari (#PCDATA)>
+<!ELEMENT sifRazlPrestPrava (#PCDATA)>
+<!ELEMENT potpunoUISVU (#PCDATA)>
+<!ELEMENT komentar (#PCDATA)>
+<!-- elementi s podelementima -->
+<!ELEMENT prelazVU (sifVUPrel, datUpisVUPrel, datDiplomPrel?, trajeStudij, iskoristioNaVUPrel, datumRjesenje, brojRjesenje?)>
+<!ELEMENT studPosStat (sifPosStat, datPocPosStat)>
+<!ELEMENT sifPosStat (#PCDATA)>
+<!ELEMENT datPocPosStat (#PCDATA)>
+<!ELEMENT studAkGod (akGodina, oznDrzavaPreb?, postOznPreb?, sifOpcinaPreb?, ulicaBrPreb?, telPreb?, datPrebOd?, sifStatStan?, oznDrzavaStan?, postOznStan?, sifOpcinaStan?, ulicaBrStan?, telStan?, sifStrSpMajka?, sifZanimanjeMajka?, sifPolUZanMajka?, sifStrSpOtac?, sifZanimanjeOtac?, sifPolUZanOtac?, sifUzdrzavatelj?, sifZanimanjeUzdrz?, sifPolUZanUzdrz?, oznBrak?, sifZdravOsig?, rjesNeRacunaPon?, studStudijVU*)>
+<!-- elementi unutar prelazVU -->
+<!ELEMENT sifVUPrel (#PCDATA)>
+<!ELEMENT datUpisVUPrel (#PCDATA)>
+<!ELEMENT datDiplomPrel (#PCDATA)>
+<!ELEMENT trajeStudij (#PCDATA)>
+<!ELEMENT iskoristioNaVUPrel (#PCDATA)>
+<!ELEMENT datumRjesenje (#PCDATA)>
+<!ELEMENT brojRjesenje (#PCDATA)>
+<!-- elementi unutar studAkGod -->
+<!ELEMENT akGodina (#PCDATA)>
+<!ELEMENT oznDrzavaPreb (#PCDATA)>
+<!ELEMENT postOznPreb (#PCDATA)>
+<!ELEMENT sifOpcinaPreb (#PCDATA)>
+<!ELEMENT ulicaBrPreb (#PCDATA)>
+<!ELEMENT telPreb (#PCDATA)>
+<!ELEMENT datPrebOd (#PCDATA)>
+<!ELEMENT sifStatStan (#PCDATA)>
+<!ELEMENT oznDrzavaStan (#PCDATA)>
+<!ELEMENT postOznStan (#PCDATA)>
+<!ELEMENT sifOpcinaStan (#PCDATA)>
+<!ELEMENT ulicaBrStan (#PCDATA)>
+<!ELEMENT telStan (#PCDATA)>
+<!ELEMENT sifStrSpMajka (#PCDATA)>
+<!ELEMENT sifZanimanjeMajka (#PCDATA)>
+<!ELEMENT sifPolUZanMajka (#PCDATA)>
+<!ELEMENT sifStrSpOtac (#PCDATA)>
+<!ELEMENT sifZanimanjeOtac (#PCDATA)>
+<!ELEMENT sifPolUZanOtac (#PCDATA)>
+<!ELEMENT sifUzdrzavatelj (#PCDATA)>
+<!ELEMENT sifZanimanjeUzdrz (#PCDATA)>
+<!ELEMENT sifPolUZanUzdrz (#PCDATA)>
+<!ELEMENT oznBrak (#PCDATA)>
+<!ELEMENT sifZdravOsig (#PCDATA)>
+<!-- elementi s podelementima -->
+<!ELEMENT rjesNeRacunaPon (sifRazlogNeRacuna, datumRjesenje, brojRjesenje?)>
+<!ELEMENT studStudijVU (paralelniStudij, datPravaDo, oznTipIndeks, sifPosStat?, koristiPosStat?, rezultatRazred?, rjesParalelStudij?, upisGodine*, rjesFinPrije?, rjesPrelazSm?)>
+<!ELEMENT rezultatRazred (akGodina, rbrRok, sifSmjer, rbrPrijava, prezKandidat, imeKandidat, JMBG, telKandidat?, imeMajka?, imeOtac?, spol?, datRodj, oznDrzavaRodj?, postOznRodj?, oznDrzavlj, sifNarod?, sifSkola?, sifStrukaZavSkola?, godMatura? , sifSmjerUpis?, sifSmjerUpis2?, sifPosStat?, koristiPosStat?, sifTemeljFin?, sifTemeljFinUpis?, oznCentarVU, bodSreSk? , bodDod?, bodUlUkup?, bodTestUk?, bodUkup?, sifRazDirUpis?, plasRazred?, sifVrLista?, rbrUlisti?)>
+<!ELEMENT rjesParalelStudij (datumRjesenje, brojRjesenje?)>
+<!ELEMENT rjesPrelazSm (datumRjesenje, razlogPrelaza, brojRjesenje?)>
+<!-- elementi unutar rezultatRazred -->
+<!ELEMENT rbrRok           (#PCDATA)>      
+<!ELEMENT rbrPrijava       (#PCDATA)>    
+<!ELEMENT prezKandidat     (#PCDATA)>    
+<!ELEMENT imeKandidat      (#PCDATA)>    
+<!-- <!ELEMENT jmbg             (#PCDATA)>    -->
+<!ELEMENT telKandidat      (#PCDATA)>    
+<!-- <!ELEMENT imeMajka         (#PCDATA)>    -->
+<!-- <!ELEMENT imeOtac          (#PCDATA)>    -->
+<!-- <!ELEMENT spol             (#PCDATA)>    -->
+<!-- <!ELEMENT datRodj          (#PCDATA)>    -->
+<!-- <!ELEMENT oznDrzavaRodj    (#PCDATA)>    -->
+<!-- <!ELEMENT postOznRodj      (#PCDATA)>    -->
+<!-- <!ELEMENT oznDrzavlj       (#PCDATA)>    -->
+<!-- <!ELEMENT sifNarod         (#PCDATA)>    -->
+<!-- <!ELEMENT sifSkola         (#PCDATA)>    -->
+<!-- <!ELEMENT sifStrukaZavSkola(#PCDATA)>    -->
+<!ELEMENT godMatura        (#PCDATA)> 
+<!ELEMENT sifSmjerUpis     (#PCDATA)> 
+<!ELEMENT sifSmjerUpis2    (#PCDATA)> 
+<!-- <!ELEMENT sifPosStat       (#PCDATA)>    -->
+<!-- <!ELEMENT koristiPosStat   (#PCDATA)>    -->
+<!-- <!ELEMENT sifTemeljFin     (#PCDATA)>    -->
+<!ELEMENT sifTemeljFinUpis (#PCDATA)> 
+<!-- <!ELEMENT oznCentarVU      (#PCDATA)>    -->
+<!ELEMENT bodSreSk         (#PCDATA)> 
+<!ELEMENT bodDod           (#PCDATA)> 
+<!ELEMENT bodUlUkup        (#PCDATA)> 
+<!ELEMENT bodTestUk        (#PCDATA)> 
+<!ELEMENT bodUkup          (#PCDATA)> 
+<!ELEMENT sifRazDirUpis    (#PCDATA)> 
+<!ELEMENT plasRazred       (#PCDATA)> 
+<!ELEMENT sifVrLista       (#PCDATA)> 
+<!ELEMENT rbrUlisti        (#PCDATA)> 
+<!-- elementi unutar rjesPrelazSm -->
+<!-- <datumRjesenje> je vec definiran -->
+<!ELEMENT razlogPrelaza (#PCDATA)>
+<!-- <brojRjesenje> je vec definiran -->
+<!-- elementi unutar rjesNeRacunaPon -->
+<!-- <akGodina> je vec definiran -->
+<!ELEMENT sifRazlogNeRacuna (#PCDATA)>
+<!-- <datumRjesenje> je vec definiran -->
+<!-- elementi unutar studStudijVU -->
+<!ELEMENT paralelniStudij (#PCDATA)>
+<!ELEMENT datPravaDo (#PCDATA)>
+<!ELEMENT oznTipIndeks (#PCDATA)>
+<!ELEMENT koristiPosStat (#PCDATA)>
+<!-- elementi s podelementima -->
+<!ELEMENT rjesFinPoslije (sifTemeljFinNovo, datumRjesenje, brojRjesenje?)>
+<!ELEMENT upisGodine (nastGodina, sifTemeljFin, oznCentarVU, sifIndUpis, datUpis, upGodSmjer+, rjesFinPoslije?)>
+<!-- elementi unutar rjesParalelStudij -->
+<!-- <datumRjesenje> je vec definiran -->
+<!-- <brojRjesenje> je vec definiran -->
+<!-- elementi unutar upisGodine -->
+<!ELEMENT nastGodina (#PCDATA)>
+<!ELEMENT sifTemeljFin (#PCDATA)>
+<!ELEMENT oznCentarVU (#PCDATA)>
+<!ELEMENT sifIndUpis (#PCDATA)>
+<!-- <datUpis> je vec definiran -->
+<!-- elementi s podelementima -->
+<!ELEMENT rjesFinPrije (sifTemeljFinNovo, datumRjesenje, brojRjesenje)>
+<!ELEMENT upGodSmjer (sifSmjer, upPred*)>
+<!-- elementi unutar rjesFinPoslije -->
+<!ELEMENT sifTemeljFinNovo (#PCDATA)>
+<!-- <datumRjesenje> je vec definiran -->
+<!-- <brojRjesenje> je vec definiran -->
+<!-- elementi unutar upGodSmjer -->
+<!ELEMENT sifSmjer (#PCDATA)>
+<!-- elementi s podelementima -->
+<!ELEMENT upPred (sifPred, rbrIzvedba, rbrKompIzvPred, rbrElUstNastSlusa, oslPolaganja, sifIzbGrupa?, imaPravoNaPotpis, ispit*)>
+<!-- elementi unutar upPred -->
+<!ELEMENT sifPred (#PCDATA)>
+<!ELEMENT rbrIzvedba (#PCDATA)>
+<!ELEMENT rbrKompIzvPred (#PCDATA)>
+<!ELEMENT rbrElUstNastSlusa (#PCDATA)>
+<!ELEMENT oslPolaganja (#PCDATA)>
+<!ELEMENT sifIzbGrupa (#PCDATA)>
+<!ELEMENT imaPravoNaPotpis (#PCDATA)>
+<!-- elementi s podelementima -->
+<!ELEMENT ispit (datumRok, oznPismeni, oznDjelPismeni?, sifOcjenaPismeni?, oznReklam?, sifOcjenaUsmeni?, datumIspit?, oznDjelUsmeni?, ispitPriznat?, studIspitPov?)>
+<!-- elementi unutar ispit -->
+<!ELEMENT datumRok (#PCDATA)>
+<!ELEMENT oznPismeni (#PCDATA)>
+<!ELEMENT oznDjelPismeni (#PCDATA)>
+<!ELEMENT sifOcjenaPismeni (#PCDATA)>
+<!ELEMENT oznReklam (#PCDATA)>
+<!ELEMENT sifOcjenaUsmeni (#PCDATA)>
+<!ELEMENT datumIspit (#PCDATA)>
+<!ELEMENT oznDjelUsmeni (#PCDATA)>
+<!ELEMENT ispitPriznat (#PCDATA)>
+<!-- elementi s podelementima -->
+<!ELEMENT studIspitPov (datumIspit, satIspitOd, sifDvorana?, opisMjestoIspitPov?, brojRjesenje?, rezIspitPov+)>
+<!-- elementi unutar studIspitPov -->
+<!-- <datumIspit> je vec definiran -->
+<!ELEMENT satIspitOd (#PCDATA)>
+<!ELEMENT sifDvorana (#PCDATA)>
+<!ELEMENT opisMjestoIspitPov (#PCDATA)>
+<!-- elementi s podelementima -->
+<!ELEMENT rezIspitPov (oznOsoba, rbrIspitPov, sifOcjena)>
+<!-- elementi unutar rezIspitPov -->
+<!ELEMENT oznOsoba (#PCDATA)>
+<!ELEMENT rbrIspitPov (#PCDATA)>
+<!ELEMENT sifOcjena (#PCDATA)>

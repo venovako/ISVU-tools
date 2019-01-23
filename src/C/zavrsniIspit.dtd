@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com) by  () -->
+<!ELEMENT ispitniRok (sifVU, sifPred, datumRok, oznVrstaRok, ispitiNaRoku)>
+<!ELEMENT ispitiNaRoku (ispit+)>
+<!ELEMENT ispit (JMBAG, oznDjelPismeni?, kratOcjenaPismeni?, kratOcjenaUsmeni?, datumIspit?, oznDjelUsmeni?)>
+<!ELEMENT sifVU (#PCDATA)>
+<!ELEMENT sifPred (#PCDATA)>
+<!ELEMENT datumRok (#PCDATA)>
+<!ELEMENT oznVrstaRok (#PCDATA)>
+<!ELEMENT JMBAG (#PCDATA)>
+<!ELEMENT oznDjelPismeni (#PCDATA)>
+<!ELEMENT kratOcjenaPismeni (#PCDATA)>
+<!ELEMENT kratOcjenaUsmeni (#PCDATA)>
+<!ELEMENT datumIspit (#PCDATA)>
+<!ELEMENT oznDjelUsmeni (#PCDATA)>

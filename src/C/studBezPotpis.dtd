@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com) by  () -->
+<!ELEMENT studBezPotpis (sifVU, sifPred, rbrIzvedba, rbrKompIzvPred, akGodina, rbrSemUAkGod, studenti)>
+<!ELEMENT studenti (JMBAG+)>
+<!ELEMENT sifVU (#PCDATA)>
+<!ELEMENT sifPred (#PCDATA)>
+<!ELEMENT rbrIzvedba (#PCDATA)>
+<!ELEMENT rbrKompIzvPred (#PCDATA)>
+<!ELEMENT akGodina (#PCDATA)>
+<!ELEMENT rbrSemUAkGod (#PCDATA)>
+<!ELEMENT JMBAG (#PCDATA)>
