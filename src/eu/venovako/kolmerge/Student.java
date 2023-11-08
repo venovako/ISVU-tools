@@ -1,4 +1,4 @@
-package hr.fsb.venovako.kolmerge;
+package eu.venovako.kolmerge;
 
 import java.util.Scanner;
 import java.util.Vector;

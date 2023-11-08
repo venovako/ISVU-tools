@@ -1,4 +1,4 @@
-package hr.fsb.venovako.kolmerge;
+package eu.venovako.sorter;
 
 class PrezimeIme implements Comparable<PrezimeIme> {
 
@@ -50,40 +50,40 @@ class PrezimeIme implements Comparable<PrezimeIme> {
 
     static int abeceda(char c) {
         switch (c) {
-        case 'A': return 0;
-        case 'B': return 1;
-        case 'C': return 2;
-        case '\u010C': return 3;
-        case '\u0106': return 4;
-        case 'D': return 5;
-        case '\u0110': return 6;
-        case 'E': return 7;
-        case 'F': return 8;
-        case 'G': return 9;
-        case 'H': return 10;
-        case 'I': return 11;
-        case 'J': return 12;
-        case 'K': return 13;
-        case 'L': return 14;
-        case '\u01C7': return 15;
-        case 'M': return 16;
-        case 'N': return 17;
-        case '\u01CA': return 18;
-        case 'O': return 19;
-        case 'P': return 20;
-        case 'Q': return 21;
-        case 'R': return 22;
-        case 'S': return 23;
-        case '\u0160': return 24;
-        case 'T': return 25;
-        case 'U': return 26;
-        case 'V': return 27;
-        case 'W': return 28;
-        case 'X': return 29;
-        case 'Y': return 30;
-        case 'Z': return 31;
-        case '\u017D': return 32;
-        default: return -1;
+            case 'A': return 0;
+            case 'B': return 1;
+            case 'C': return 2;
+            case '\u010C': return 3;
+            case '\u0106': return 4;
+            case 'D': return 5;
+            case '\u0110': return 6;
+            case 'E': return 7;
+            case 'F': return 8;
+            case 'G': return 9;
+            case 'H': return 10;
+            case 'I': return 11;
+            case 'J': return 12;
+            case 'K': return 13;
+            case 'L': return 14;
+            case '\u01C7': return 15;
+            case 'M': return 16;
+            case 'N': return 17;
+            case '\u01CA': return 18;
+            case 'O': return 19;
+            case 'P': return 20;
+            case 'Q': return 21;
+            case 'R': return 22;
+            case 'S': return 23;
+            case '\u0160': return 24;
+            case 'T': return 25;
+            case 'U': return 26;
+            case 'V': return 27;
+            case 'W': return 28;
+            case 'X': return 29;
+            case 'Y': return 30;
+            case 'Z': return 31;
+            case '\u017D': return 32;
+            default: return -1;
         }
     }
 

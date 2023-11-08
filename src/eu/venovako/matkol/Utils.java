@@ -1,6 +1,6 @@
-// MatKol by <venovako@fsb.hr>
+// MatKol by <venovako@venovako.eu>
 
-package hr.fsb.venovako.matkol;
+package eu.venovako.matkol;
 
 final class Utils {
 

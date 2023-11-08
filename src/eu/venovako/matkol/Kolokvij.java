@@ -1,6 +1,6 @@
-// MatKol <venovako@fsb.hr>
+// MatKol <venovako@venovako.eu>
 
-package hr.fsb.venovako.matkol;
+package eu.venovako.matkol;
 
 import java.util.Scanner;
 

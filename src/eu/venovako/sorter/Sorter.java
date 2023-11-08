@@ -1,4 +1,4 @@
-package hr.fsb.venovako.sorter;
+package eu.venovako.sorter;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

@@ -5,6 +5,6 @@ Na Windows sustavima, `*.bat` skripte kompajliraju programe.
 
 Na Linux i macOS sustavima, `*.sh` skripte kompajliraju programe.
 
-Potreban je Java JDK s `bin` poddirektorijem u sistemskoj `PATH` varijabli, te C kompajler (isprobano s Microsoft i Clang kompajlerima).
+Potreban je Java JDK s `bin` poddirektorijem u sistemskoj `PATH` varijabli, te C kompajler.
 
 Za upute pogledati izvorni kod.

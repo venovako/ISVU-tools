@@ -1,4 +1,4 @@
-package hr.fsb.venovako.isvurez;
+package eu.venovako.isvurez;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
